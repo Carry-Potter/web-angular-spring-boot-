@@ -1,0 +1,121 @@
+{
+  "permissions": {
+    "/books": [
+      "ROLE_USER",
+      "ROLE_ADMIN"
+    ],
+    "/rents": [
+      "ROLE_USER",
+      "ROLE_ADMIN"
+    ]
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "roles": [
+        "ROLE_ADMIN"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user",
+      "roles": [
+        "ROLE_USER"
+      ]
+    }
+  ],
+  "books": [
+    {
+      "id": 2,
+      "title": "Endymion",
+      "author": "Dan Simmons",
+      "genre": "Science fiction2"
+    },
+    {
+      "id": 3,
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr2"
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 4
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 5
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 6
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 7
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 8
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 9
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 10
+    },
+    {
+      "title": "Prva",
+      "author": "autor",
+      "genre": "zanr",
+      "id": 11
+    },
+    {
+      "title": "treca",
+      "author": "treca",
+      "genre": "treca",
+      "id": 12
+    }
+  ],
+  "rents": [
+    {
+      "userId": {
+        "id": 1,
+        "username": "admin",
+        "password": "admin",
+        "roles": [
+          "ROLE_ADMIN"
+        ]
+      },
+      "bookId": {
+        "title": "Prva",
+        "author": "autor",
+        "genre": "zanr",
+        "id": 5
+      },
+      "rentDate": "dat",
+      "returnDate": "dat",
+      "state": "asd",
+      "price": 111,
+      "id": 1
+    }
+  ]
+}

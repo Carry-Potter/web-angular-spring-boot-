@@ -1,0 +1,68 @@
+<div class="col-md-12">
+    <div class="d-flex justify-content-center">
+        <form [formGroup]="form" (ngSubmit)="create()">
+            <div class="row mb-3">
+                <label for="id" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                    <input #id id="id" class="form-control" type="number" formControlName="id" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="naziv" class="col-sm-2 col-form-label">Naziv</label>
+                <div class="col-sm-10">
+                    <input #naziv name="naziv" id="naziv" class="form-control" type="text" formControlName="naziv" required>
+                    <div class="alert alert-danger" *ngIf="form.controls['naziv'].touched && form.controls['naziv'].invalid">
+                        Obavezno je uneti naziv.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="drzava" class="col-sm-2 col-form-label">Drzava</label>
+                <div class="col-sm-10">
+                    <select formControlName="drzava" >
+                        <option *ngFor="let a of drzava" [ngValue]="a">{{a.naziv}}</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div>
+                <input class="btn btn-primary" type="submit" value="Potvrdi">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--<form [formGroup]="form" (ngSubmit)="create()" ngNativeValidate>
+
+    <div>
+        <label>ID: <input type="number" formControlName="id" ></label>
+    </div>
+    <div>
+        <label>Naziv: <input type="text" formControlName="naziv" ></label>
+    </div>
+    <div>
+        <label >Drzava:
+            <select formControlName="drzava" >
+                <option *ngFor="let a of drzava" [ngValue]="a">{{a.naziv}}</option>
+            </select>
+        </label>
+    </div>
+   
+    <div>
+        <input class="btn btn-primary" type="submit" value="Potvrdi">
+    </div>
+</form>-->
+
+<div class="col-md-10 kartica">
+    <div class="row mb-3"></div>
+    <div class="d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Naziv: {{ naziv.value }}</h5>
+                    <p class="card-text">Id: {{ id.value }}</p>
+                </div>
+        </div>
+    </div>
+</div>

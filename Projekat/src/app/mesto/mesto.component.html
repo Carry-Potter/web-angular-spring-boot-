@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center naslovi">
+<h3>Dodavanje</h3>
+<app-mesto-form [drzava]="drzava" (createEvent)="create($event)"></app-mesto-form>
+
+<h3>Izmena</h3>
+<app-mesto-form [mesto]="mestoUpdate" [drzava]="drzava" (createEvent)="update($event)"></app-mesto-form>
+</div>
+
+<div class="d-flex justify-content-center">
+    <table class="table table-striped align-middle">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Naziv mesta</th>
+                <th scope="col">Drzava</th>
+                <th scope="col">Akcije</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of mesto">
+                <td>{{m.id}}</td>
+                <td>{{m.naziv}}</td>
+                <td *ngIf="m.drzava != null">{{m.drzava["naziv"]}}</td>
+                <!-- <td *ngIf="m.drzava != null">{{m.drzava.naziv}}</td> -->
+                <td><button type="button" class="btn btn-danger m-2" (click)="delete(m.id)">Ukloni</button>
+                    <button type="button" class="btn btn-danger m-2" (click)="setUpdate(m)">Izmeni</button>
+                    <a routerLink="/mesta/{{m.id}}">Detalji</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

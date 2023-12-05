@@ -1,0 +1,7 @@
+ng generate interface model/putnik
+ng generate service services/putnik
+ng generate component karteDodavanje
+
+
+json-server db.json
+json-server --watch db.json

@@ -1,0 +1,12 @@
+<form [formGroup]="forma" (ngSubmit)="submit()">
+    <div>
+        <label>Korisnicko ime: <input type="text" formControlName="username"></label>
+    </div>
+    <div>
+        <label>Lozinka: <input type="password" formControlName="password"></label>
+    </div>
+    <div>
+        <label><input type="submit" value="Login"></label>
+    </div>
+</form>
+<p *ngIf="loginFailed">Login failed!</p>
